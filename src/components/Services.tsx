@@ -99,9 +99,9 @@ const Services = () => {
             
           </div>
 
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105">
+          <a target='_blank' href='http://wa.me/5513991627992' className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105">
             Solicitar Orçamento
-          </button>
+          </a >
         </div>
       </div>
     </section>
