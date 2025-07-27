@@ -1,47 +1,47 @@
-import React, { useState } from 'react';
-import { Calendar, Clock, User, Phone, Mail, MessageSquare } from 'lucide-react';
+import wpp from "../../images/wpp.svg"
+import {  Mail } from 'lucide-react';
 
 const Booking = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    service: '',
-    date: '',
-    time: '',
-    message: ''
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   phone: '',
+  //   email: '',
+  //   service: '',
+  //   date: '',
+  //   time: '',
+  //   message: ''
+  // });
 
-  const services = [
-    'Nail Art Premium',
-    'Esmaltação Gel',
-    'Alongamento de Unhas',
-    'Cuidados Especiais',
-    'Serviços para Noivas',
-    'Eventos Especiais'
-  ];
+  // const services = [
+  //   'Nail Art Premium',
+  //   'Esmaltação Gel',
+  //   'Alongamento de Unhas',
+  //   'Cuidados Especiais',
+  //   'Serviços para Noivas',
+  //   'Eventos Especiais'
+  // ];
 
-  const timeSlots = [
-    '09:00', '10:00', '11:00', '12:00', 
-    '14:00', '15:00', '16:00', '17:00', '18:00'
-  ];
+  // const timeSlots = [
+  //   '09:00', '10:00', '11:00', '12:00', 
+  //   '14:00', '15:00', '16:00', '17:00', '18:00'
+  // ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  // const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value
+  //   });
+  // };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Handle form submission
+  //   console.log('Form submitted:', formData);
+  // };
 
   return (
     <section id="booking" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -53,15 +53,14 @@ const Booking = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-1 gap-12">
           {/* Booking Form */}
-          <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
+           {/* <div className="bg-gray-50 rounded-3xl p-8 md:p-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">
               Preencha seus dados
             </h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Personal Info */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -107,7 +106,6 @@ const Booking = () => {
                 />
               </div>
 
-              {/* Service Selection */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Serviço Desejado *
@@ -128,7 +126,6 @@ const Booking = () => {
                 </select>
               </div>
 
-              {/* Date and Time */}
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -166,7 +163,6 @@ const Booking = () => {
                 </div>
               </div>
 
-              {/* Message */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   <MessageSquare className="w-4 h-4 inline mr-2" />
@@ -189,7 +185,7 @@ const Booking = () => {
                 Agendar Horário
               </button>
             </form>
-          </div>
+          </div> */}
 
           {/* Info Panel */}
           <div className="space-y-8">
@@ -205,7 +201,7 @@ const Booking = () => {
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-gray-700">
                   <span>Sábado</span>
-                  <span className="text-yellow-400">09:00 - 17:00</span>
+                  <span className="text-yellow-400">09:00 - 18:00</span>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span>Domingo</span>
@@ -221,12 +217,12 @@ const Booking = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-yellow-600" />
-                  <span className="text-gray-700">(11) 99999-9999</span>
+                  <img style={{backgroundColor: "rgb(202 138 4 / var(--tw-text-opacity))", width:"20px"}} src={wpp} alt='whatsapp icon'></img>
+                  <a target='_blank' href='http://wa.me/5513991627992' className="text-gray-700">(13) 99162.7992</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-yellow-600" />
-                  <span className="text-gray-700">contato@gasparottonew.com</span>
+                  <a href='mailto:contato@gasparottonaildesigner.com.br' className="text-gray-700">contato@gasparottonaildesigner.com.br</a>
                 </div>
               </div>
               <div className="mt-6 p-4 bg-white rounded-lg border border-yellow-200">

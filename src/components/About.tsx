@@ -22,7 +22,7 @@ const About = () => {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src="https://images.pexels.com/photos/3997987/pexels-photo-3997987.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Gasparotto New Designer Studio"
+                alt="Gasparotto Nail Designer Studio"
                 className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
@@ -38,7 +38,7 @@ const About = () => {
               Excelência em Nail Design desde 2019
             </h3>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              O Gasparotto New Designer nasceu da paixão por transformar unhas em verdadeiras obras de arte. 
+              O Gasparotto Nail Designer nasceu da paixão por transformar unhas em verdadeiras obras de arte. 
               Com mais de 5 anos de experiência, nossa fundadora combina técnicas tradicionais com as 
               mais modernas tendências do mercado.
             </p>

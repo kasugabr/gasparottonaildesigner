@@ -12,23 +12,24 @@ const Services = () => {
     },
     {
       icon: <Palette className="w-8 h-8" />,
-      title: "Esmaltação Gel",
-      description: "Esmaltação profissional com gel de alta qualidade e longa duração.",
-      price: "A partir de R$ 50",
-      features: ["Secagem LED", "Cores vibrantes", "Até 4 semanas de duração"]
+      "title": "Blindagem em Gel",
+    "description": "Reforço das unhas naturais com gel para maior resistência e durabilidade, sem alongamento.",
+    "price": "A partir de R$ 80",
+    "features": ["Fortalecimento das unhas", "Acabamento natural e brilhante", "Proteção contra quebras e descamações"]
     },
     {
       icon: <Crown className="w-8 h-8" />,
       title: "Alongamento de Unhas",
-      description: "Alongamento com gel ou fibra de vidro para unhas naturalmente belas.",
-      price: "A partir de R$ 120",
-      features: ["Aparência natural", "Resistência", "Manutenção inclusa"]
+      description: "Alongamento com gel ou molde F1 para unhas naturalmente belas.",
+      price: "R$ 180",
+      features: ["Aparência natural", "Resistência", "Manutenção inclusa*"], 
+      info:"* Consulte nossos valores para pacotes com manutenção"
     },
     {
       icon: <Scissors className="w-8 h-8" />,
       title: "Cuidados Especiais",
       description: "Tratamentos especializados para fortalecimento e cuidado das unhas.",
-      price: "A partir de R$ 60",
+      price: "A partir de R$ 45",
       features: ["Hidratação profunda", "Fortalecimento", "Cuticulagem"]
     }
   ];
@@ -71,6 +72,8 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
+
+              {service.info && <p className="text-gray-600 mb-4 leading-relaxed mt-4 text-xs">{service.info}</p>}
             </div>
           ))}
         </div>
@@ -93,10 +96,7 @@ const Services = () => {
               <h4 className="text-xl font-bold text-yellow-400 mb-2">Eventos</h4>
               <p className="text-gray-300">Designs temáticos para ocasiões especiais</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-yellow-400/20">
-              <h4 className="text-xl font-bold text-yellow-400 mb-2">Corporativo</h4>
-              <p className="text-gray-300">Atendimento empresarial e em domicílio</p>
-            </div>
+            
           </div>
 
           <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105">

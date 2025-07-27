@@ -18,7 +18,7 @@ const Policy = () => {
       title: "Política de Pagamento",
       items: [
         "Aceitamos dinheiro, cartão (débito/crédito) e PIX",
-        "Pagamento no cartão pode ser parcelado em até 12x",
+        "Pagamento no cartão pode ser parcelado",
         "Para serviços especiais, pode ser solicitada entrada antecipada",
         "Preços sujeitos a alteração sem aviso prévio"
       ]
@@ -117,7 +117,7 @@ const Policy = () => {
                 Compromisso com a Qualidade
               </h4>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                No Gasparotto New Designer, nosso compromisso é oferecer sempre o melhor serviço possível. 
+                No Gasparotto Nail Designer, nosso compromisso é oferecer sempre o melhor serviço possível. 
                 Utilizamos apenas produtos premium e seguimos rigorosamente todos os protocolos de higiene e segurança.
               </p>
               <p className="text-gray-600 leading-relaxed">
@@ -153,7 +153,7 @@ const Policy = () => {
             Estas políticas podem ser atualizadas periodicamente, e sempre informaremos nossos clientes sobre mudanças importantes.
           </p>
           <p className="text-sm text-gray-400">
-            Última atualização: Janeiro de 2024 • Gasparotto New Designer • CNPJ: 12.345.678/0001-99
+            Última atualização: Janeiro de 2025 • Gasparotto Nail Designer
           </p>
         </div>
       </div>

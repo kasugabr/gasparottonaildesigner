@@ -1,9 +1,10 @@
 import React from 'react';
+import logo from '../../images/logo_noBG.png'
 import { Sparkles, Calendar, Star } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" style={{minHeight:"110vh"}} className="relative flex items-center justify-center overflow-hidden">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
         <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center opacity-20"></div>
@@ -19,14 +20,11 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <div className="mb-6">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">
-            <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-              Gasparotto
-            </span>
-            <br />
-            <span className="text-white">New Designer</span>
-          </h1>
+        <div className="mb-6" >
+          <div style={{ display: "flex", alignItems:"center", "justifyContent":"center", height:"38vw", minHeight:"300px", maxHeight:"630px" }}>
+            <img style={{width:"50vw", minWidth:"380px"}}  src={logo} alt='logo' ></img>
+          </div>
+
           <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 mx-auto mb-6"></div>
         </div>
 
@@ -35,13 +33,13 @@ const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <a target='_blank' href='http://wa.me/5513991627992' className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
             <Calendar className="w-5 h-5 inline mr-2" />
             Agendar Agora
-          </button>
-          <button className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300">
+          </a>
+          <a href='#portfolio' className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300">
             Ver Portfólio
-          </button>
+          </a >
         </div>
 
         {/* Stats */}

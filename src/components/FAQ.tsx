@@ -18,11 +18,11 @@ const FAQ = () => {
       questions: [
         {
           question: "Como posso agendar meu horário?",
-          answer: "Você pode agendar através do nosso formulário online, WhatsApp (11) 99999-9999 ou ligando diretamente para o studio. Recomendamos o agendamento antecipado devido à alta demanda."
+          answer: "Você pode agendar através do nosso formulário online, WhatsApp (13) 99162.7992 ou ligando diretamente para o studio. Recomendamos o agendamento antecipado devido à alta demanda."
         },
         {
           question: "Qual é a política de cancelamento?",
-          answer: "Cancelamentos devem ser feitos com pelo menos 24 horas de antecedência. Cancelamentos de última hora podem estar sujeitos a taxa de cancelamento."
+          answer: "Cancelamentos devem ser feitos com pelo menos 24 horas de antecedência."
         },
         {
           question: "Posso remarcar meu horário?",
@@ -35,15 +35,15 @@ const FAQ = () => {
       questions: [
         {
           question: "Quanto tempo dura cada serviço?",
-          answer: "O tempo varia conforme o serviço: Esmaltação gel (1h), Nail art simples (1h30), Nail art complexa (2-3h), Alongamento (2h), Manutenção (1h)."
+          answer: "O tempo varia conforme o serviço: Esmaltação gel (1h), Nail art simples (1h30), Nail art complexa (2-3h), Alongamento (3h), Manutenção (1h)."
         },
         {
           question: "Vocês trabalham com que tipos de produtos?",
-          answer: "Utilizamos apenas produtos premium das melhores marcas do mercado, garantindo qualidade, durabilidade e segurança para suas unhas."
+          answer: "Utilizamos apenas produtos premium das melhores marcas do mercado (Volia, Uze, AnyLovy, D&Z, Dafu e etc.), garantindo qualidade, durabilidade e segurança para suas unhas."
         },
         {
           question: "Fazem atendimento em domicílio?",
-          answer: "Sim, oferecemos serviços em domicílio para ocasiões especiais, grupos ou clientes VIP. Entre em contato para consultar disponibilidade e valores."
+          answer: "Não, devido a nossa alta demanda no studio não oferecemos serviços em domicílio."
         }
       ]
     },
@@ -52,7 +52,7 @@ const FAQ = () => {
       questions: [
         {
           question: "Qual é a forma de pagamento aceita?",
-          answer: "Aceitamos dinheiro, cartão de débito/crédito (até 12x), PIX e transferência bancária. Para alguns serviços, solicitamos uma entrada antecipada."
+          answer: "Aceitamos dinheiro, cartão de débito/crédito, e PIX. Para alguns serviços, solicitamos uma entrada antecipada."
         },
         {
           question: "Os preços podem variar?",
@@ -157,12 +157,10 @@ const FAQ = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105">
-              Entrar em Contato
-            </button>
-            <button className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300">
+
+            <a target='_blank' href='http://wa.me/5513991627992' className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300">
               Chamar no WhatsApp
-            </button>
+            </a>
           </div>
         </div>
       </div>

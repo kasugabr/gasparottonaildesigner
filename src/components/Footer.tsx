@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, Facebook, MessageCircle, Heart, Sparkles } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, MessageCircle, Heart, Sparkles } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="flex items-center mb-6">
               <div className="text-2xl font-bold">
                 <span className="text-white">Gasparotto</span>
-                <span className="text-yellow-400 ml-2">New Designer</span>
+                <span className="text-yellow-400 ml-2">Nail Designer</span>
               </div>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
@@ -23,19 +23,14 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                target='_blank'
+                  href="https://www.instagram.com/gasparotto_nail_designer?utm_source=qr&igsh=Y3owZHZ5NzRudGt2"
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all duration-300"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all duration-300"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                target='_blank' href='http://wa.me/5513991627992'
                 className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-400 hover:text-black transition-all duration-300"
               >
                 <MessageCircle className="w-5 h-5" />
@@ -91,23 +86,23 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-6 text-yellow-400">Contato</h3>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
+              <a target='_blank' href='https://maps.app.goo.gl/6L5LLrCXXzKhgvkMA' className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-yellow-400 mt-1" />
                 <div className="text-gray-400">
-                  <p>Rua das Flores, 123</p>
-                  <p>Jardim Paulista, São Paulo - SP</p>
-                  <p>CEP: 01234-567</p>
+                  <p>Rua Alfredo Shammass, 44</p>
+                  <p>Marapé, Santos - SP</p>
+                  <p>Apto: 13</p>
                 </div>
-              </div>
+              </a>
               
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-yellow-400" />
-                <span className="text-gray-400">(11) 99999-9999</span>
+                <a target='_blank' href='http://wa.me/5513991627992' className="text-gray-400">(13) 99162.7992</a>
               </div>
               
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-yellow-400" />
-                <span className="text-gray-400">contato@gasparottonew.com</span>
+                <a target='_blank' href='mailto:contato@gasparottonaildesigner.com.br'  className="text-gray-400">contato@gasparottonaildesigner.com.br</a>
               </div>
             </div>
 
@@ -116,34 +111,9 @@ const Footer = () => {
               <h4 className="font-semibold text-white mb-3">Horário de Funcionamento</h4>
               <div className="text-sm text-gray-400 space-y-1">
                 <p>Segunda à Sexta: 09:00 - 19:00</p>
-                <p>Sábado: 09:00 - 17:00</p>
+                <p>Sábado: 09:00 - 18:00</p>
                 <p>Domingo: Fechado</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Newsletter Section */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center">
-            <h3 className="text-xl font-bold text-white mb-2">
-              Receba Nossas <span className="text-yellow-400">Novidades</span>
-            </h3>
-            <p className="text-gray-400 mb-6">
-              Assine nossa newsletter e fique por dentro das últimas tendências
-            </p>
-            
-            <div className="max-w-md mx-auto flex gap-3">
-              <input
-                type="email"
-                placeholder="Seu melhor e-mail"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent text-white placeholder-gray-400"
-              />
-              <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300">
-                Assinar
-              </button>
             </div>
           </div>
         </div>
@@ -155,7 +125,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-center md:text-left mb-4 md:mb-0">
               <p>
-                © {currentYear} Gasparotto New Designer. Todos os direitos reservados.
+                © {currentYear} Gasparotto Nail Designer. Todos os direitos reservados.
               </p>
             </div>
             
@@ -178,10 +148,7 @@ const Footer = () => {
                 FAQ
               </a>
             </div>
-            
-            <div className="text-sm text-gray-400 mt-2 md:mt-0">
-              CNPJ: 12.345.678/0001-99
-            </div>
+
           </div>
         </div>
       </div>

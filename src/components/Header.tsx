@@ -25,16 +25,16 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Phone className="w-4 h-4 text-yellow-400" />
-              <span>(11) 99999-9999</span>
+              <span>(13) 99162.7992</span>
             </div>
             <div className="flex items-center space-x-1">
               <MapPin className="w-4 h-4 text-yellow-400" />
-              <span>São Paulo, SP</span>
+              <span>Santos, SP</span>
             </div>
           </div>
           <div className="flex items-center space-x-1">
             <Clock className="w-4 h-4 text-yellow-400" />
-            <span>Seg-Sáb: 9h-19h</span>
+            <span>Seg-Sex: 9h-19h | Sáb: 9h-18h</span>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ const Header = () => {
             <div className="flex items-center">
               <div className="text-2xl font-bold">
                 <span className="text-black">Gasparotto</span>
-                <span className="text-yellow-600 ml-2">New Designer</span>
+                <span className="text-yellow-600 ml-2">Nail Designer</span>
               </div>
             </div>
 

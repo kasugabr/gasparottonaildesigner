@@ -1,8 +1,64 @@
 import React, { useState } from 'react';
-import { Heart, Eye, ExternalLink } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('todos');
+  const [ portfolioItems, setPortifolioItems] = useState([
+    {
+      id: 1,
+      category: 'nail-art',
+      image: 'https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Nail Art Floral',
+      description: 'Design delicado com flores pintadas à mão',
+      likes: 238,
+      isLiked: false
+    },
+    {
+      id: 2,
+      category: 'gel',
+      image: 'https://images.pexels.com/photos/3997984/pexels-photo-3997984.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Esmaltação Nude',
+      description: 'Acabamento perfeito em tom nude clássico',
+      likes: 190,
+      isLiked: false
+    },
+    {
+      id: 3,
+      category: 'nail-art',
+      image: 'https://images.pexels.com/photos/3997378/pexels-photo-3997378.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Design Geométrico',
+      description: 'Padrões geométricos modernos em dourado',
+      likes: 312,
+      isLiked: false
+    },
+    {
+      id: 4,
+      category: 'alongamento',
+      image: 'https://images.pexels.com/photos/3997383/pexels-photo-3997383.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Alongamento Stiletto',
+      description: 'Alongamento elegante com formato stiletto',
+      likes: 406,
+      isLiked: false
+    },
+    {
+      id: 5,
+      category: 'especiais',
+      image: 'https://images.pexels.com/photos/3997982/pexels-photo-3997982.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Noiva Clássica',
+      description: 'Design especial para dia do casamento',
+      likes: 174,
+      isLiked: false
+    },
+    {
+      id: 6,
+      category: 'nail-art',
+      image: 'https://images.pexels.com/photos/3997985/pexels-photo-3997985.jpeg?auto=compress&cs=tinysrgb&w=600',
+      title: 'Arte Abstrata',
+      description: 'Criação artística com cores vibrantes',
+      likes: 268,
+      isLiked: false
+    }
+  ])
 
   const categories = [
     { id: 'todos', name: 'Todos' },
@@ -11,57 +67,40 @@ const Portfolio = () => {
     { id: 'alongamento', name: 'Alongamento' },
     { id: 'especiais', name: 'Especiais' }
   ];
+  
 
-  const portfolioItems = [
+
+
+  const handleLike = (item:any) => {
+    const currentHeart = portfolioItems.map((e) => 
     {
-      id: 1,
-      category: 'nail-art',
-      image: 'https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Nail Art Floral',
-      description: 'Design delicado com flores pintadas à mão',
-      likes: 128
-    },
-    {
-      id: 2,
-      category: 'gel',
-      image: 'https://images.pexels.com/photos/3997984/pexels-photo-3997984.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Esmaltação Nude',
-      description: 'Acabamento perfeito em tom nude clássico',
-      likes: 95
-    },
-    {
-      id: 3,
-      category: 'nail-art',
-      image: 'https://images.pexels.com/photos/3997378/pexels-photo-3997378.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Design Geométrico',
-      description: 'Padrões geométricos modernos em dourado',
-      likes: 156
-    },
-    {
-      id: 4,
-      category: 'alongamento',
-      image: 'https://images.pexels.com/photos/3997383/pexels-photo-3997383.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Alongamento Stiletto',
-      description: 'Alongamento elegante com formato stiletto',
-      likes: 203
-    },
-    {
-      id: 5,
-      category: 'especiais',
-      image: 'https://images.pexels.com/photos/3997982/pexels-photo-3997982.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Noiva Clássica',
-      description: 'Design especial para dia do casamento',
-      likes: 87
-    },
-    {
-      id: 6,
-      category: 'nail-art',
-      image: 'https://images.pexels.com/photos/3997985/pexels-photo-3997985.jpeg?auto=compress&cs=tinysrgb&w=600',
-      title: 'Arte Abstrata',
-      description: 'Criação artística com cores vibrantes',
-      likes: 134
+      let newObj = {id: e.id,
+      category: e.category,
+      image: e.image,
+      title: e.title,
+      description: e.description,
+      likes: e.likes ,
+      isLiked: true
     }
-  ];
+
+      if(e.id === item.id){
+
+        if(item.isLiked){
+          newObj["likes"] = newObj.likes - 1 
+          newObj["isLiked"] = false
+          return newObj
+        }
+
+        newObj["likes"] = newObj.likes +1
+        newObj["isLiked"] = true
+        return newObj
+      }
+
+      return e
+    })
+    setPortifolioItems(currentHeart)
+  }
+
 
   const filteredItems = selectedCategory === 'todos' 
     ? portfolioItems 
@@ -113,15 +152,7 @@ const Portfolio = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
-                {/* Overlay Icons */}
-                <div className="absolute inset-0 flex items-center justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors">
-                    <Eye className="w-6 h-6" />
-                  </button>
-                  <button className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors">
-                    <ExternalLink className="w-6 h-6" />
-                  </button>
-                </div>
+
               </div>
 
               <div className="p-6">
@@ -130,7 +161,7 @@ const Portfolio = () => {
                 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2 text-gray-500">
-                    <Heart className="w-5 h-5" />
+                    <Heart onClick={()=> handleLike(item)} style={{ color:item.isLiked ? "red" : "", cursor:"pointer"}} className="w-5 h-5" />
                     <span className="text-sm">{item.likes}</span>
                   </div>
                   <span className="text-xs text-yellow-600 font-medium uppercase tracking-wide">
@@ -147,9 +178,10 @@ const Portfolio = () => {
           <p className="text-lg text-gray-600 mb-6">
             Gostou do que viu? Entre em contato para criar seu design único!
           </p>
-          <button className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+          <a target='_blank'
+                  href="https://www.instagram.com/gasparotto_nail_designer?utm_source=qr&igsh=Y3owZHZ5NzRudGt2" className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-semibold text-lg hover:from-yellow-500 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
             Ver Mais Trabalhos
-          </button>
+          </a>
         </div>
       </div>
     </section>
